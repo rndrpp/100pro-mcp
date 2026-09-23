@@ -1,5 +1,7 @@
 # 100pro Token Risk Screen — MCP server
 
+[![100pro-token-risk MCP connector](https://glama.ai/mcp/connectors/dev.rendraputra/100pro-token-risk/badges/score.svg)](https://glama.ai/mcp/connectors/dev.rendraputra/100pro-token-risk)
+
 Pre-trade risk screening for EVM token contracts and Solana SPL mints, exposed as a **remote MCP
 tool**. Honeypot/tax/owner flags, LP-lock state, mint & freeze authority, transfer fee/hook, holder
 concentration, liquidity depth, wash-trade signals — ending in a one-line **Verdict**.
