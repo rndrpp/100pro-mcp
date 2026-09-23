@@ -22,7 +22,8 @@ TOOL = {
                     "Ethereum, BSC, Polygon, Arbitrum, Solana): honeypot/tax/owner flags, LP-lock "
                     "state, mint & freeze authority, holder concentration, liquidity depth, "
                     "wash-trade signals, and a final Verdict line. Up to 5 comma-separated tokens "
-                    "per call. $0.05 USDC per call on Base via x402 v2 — no account, no API key. "
+                    "per call. $0.10 USDC for one token, $0.25 for a 2-5 token batch, on Base via x402 v2 — "
+                    "no account, no API key. "
                     "An unpaid call answers HTTP 402 with the payment challenge; sign it and retry "
                     "with the payment under params._meta['x402/payment']."),
     "inputSchema": {"type": "object", "properties": {
@@ -47,7 +48,8 @@ def local_reply(msg):
             "protocolVersion": (msg.get("params") or {}).get("protocolVersion") or "2025-06-18",
             "capabilities": {"tools": {"listChanged": False}},
             "serverInfo": {"name": "100pro-token-risk-screen", "version": "1.0.0"},
-            "instructions": ("Paid tool: $0.05 USDC per call on Base (x402 v2, no account, no API key). "
+            "instructions": ("Paid tool: $0.10 USDC per single token, $0.25 for a 2-5 token batch, "
+                             "on Base (x402 v2, no account, no API key). "
                              "Calls are forwarded to https://x402.rendraputra.dev/mcp; an unpaid call "
                              "returns HTTP 402 with the payment challenge.")}}
     if m == "tools/list":

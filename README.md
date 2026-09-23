@@ -9,7 +9,8 @@ concentration, liquidity depth, wash-trade signals — ending in a one-line **Ve
 - **Endpoint:** `https://x402.rendraputra.dev/mcp` (MCP streamable HTTP, JSON-RPC 2.0)
 - **Tool:** `token_risk_screen` (`token`, `chain`) — read-only, up to 5 comma-separated addresses per call
 - **Chains:** `base`, `ethereum`, `bsc`, `polygon`, `arbitrum`, `solana`
-- **Price:** **$0.05 USDC per call** on Base, paid with [x402](https://www.x402.org) v2 — no account,
+- **Price:** **$0.10 USDC per single token**, **$0.25 for a 2-5 token batch**, on Base, paid with
+  [x402](https://www.x402.org) v2 — no account,
   no API key, no subscription. An unpaid call answers HTTP 402 with the payment challenge; pay it and
   retry. Free metadata: [`/llms.txt`](https://x402.rendraputra.dev/llms.txt),
   [`/openapi.json`](https://x402.rendraputra.dev/openapi.json),
@@ -67,7 +68,8 @@ A markdown report per token, e.g.:
 ...
 ```
 
-If the call is unpaid the server answers with the x402 payment challenge (HTTP 402). Pay $0.05 USDC on
+If the call is unpaid the server answers with the x402 payment challenge (HTTP 402). Pay $0.10 USDC
+(single token) or $0.25 (2-5 token batch) on
 Base to the `payTo` in the challenge and retry; the response carries a `PAYMENT-RESPONSE` receipt
 naming the settled transaction.
 

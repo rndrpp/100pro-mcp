@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
   "name": "dev.rendraputra/100pro-token-risk",
-  "description": "Risk screen for EVM tokens and Solana mints: honeypot, LP lock, mint/freeze. $0.05 USDC on Base.",
-  "version": "1.0.1",
+  "description": "Risk screen for EVM tokens and Solana mints: honeypot, LP lock, mint/freeze. $0.10 USDC on Base.",
+  "version": "1.0.2",
   "websiteUrl": "https://x402.rendraputra.dev",
   "repository": {
     "url": "https://github.com/rndrpp/100pro-mcp",
