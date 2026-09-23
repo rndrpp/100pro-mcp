@@ -87,3 +87,14 @@ on-chain verdict.
 - x402 protocol: <https://www.x402.org>
 
 MIT licensed.
+
+### Repo layout
+
+- `100pro_mcp.py` — repo-root entry point (`python3 100pro_mcp.py`, and the file container
+  checkers execute after cloning); it bootstraps `pro100/bridge.py`.
+- `pro100/bridge.py` — the actual stdio bridge: answers `initialize` / `tools/list` locally
+  (so introspection needs no network) and forwards `tools/call` to the hosted endpoint.
+- `pyproject.toml` — packages `pro100`, console script `100pro-mcp` (so `uvx --from
+  git+https://github.com/rndrpp/100pro-mcp 100pro-mcp` works).
+
+Python 3.9+, standard library only — nothing to install for the plain-script path.
