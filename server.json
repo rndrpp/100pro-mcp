@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.rndrpp/100pro-token-risk",
+  "description": "Pre-trade risk screen for EVM token contracts and Solana SPL mints: honeypot/tax/owner flags, LP lock, mint & freeze authority, holder concentration, liquidity depth, wash-trade signals, final Verdict. $0.05 USDC per call on Base via x402.",
+  "version": "1.0.0",
+  "websiteUrl": "https://x402.rendraputra.dev",
+  "repository": {
+    "url": "https://github.com/rndrpp/100pro-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://x402.rendraputra.dev/mcp"
+    }
+  ],
+  "packages": []
+}
